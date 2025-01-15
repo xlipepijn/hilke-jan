@@ -1,0 +1,15 @@
+<section class="cardsOverview">
+  <div class="cardsOverview__titleContainer font-M">
+    <span class="font-underline">
+      {{ post.meta('cardsOverview_title') }}
+    </span>
+  </div>
+
+  <div class="cardsOverview__cards" data-flickity='{ "cellAlign": "center", "contain": true, "pageDots" :false, "wrapAround" : true, "imagesLoaded": true, "watchCSS" : true }'>
+    {% for card in post.meta('cardsoverview_projects') %}
+        {% include "components/card.twig" with {
+
+        } %}
+    {% endfor %}
+  </div>
+</section>

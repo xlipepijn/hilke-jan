@@ -4,12 +4,11 @@
 
 // Components
 @use "./styles/_button";
+@use "./styles/_card";
 
 // Modules
 @use "./styles/_homeHero";
 @use "./styles/_homeIntroduction";
 @use "./styles/_logoOverview";
-@use "./styles/_blockText";
-@use "./styles/_projectsSlider";
-@use "./styles/_videosOverview";
+@use "./styles/_cardsOverview";
 @use "./styles/_blockCta";

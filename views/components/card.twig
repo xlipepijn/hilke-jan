@@ -1,0 +1,16 @@
+<a class="card" href="{{ card.link }}" target="_blank">
+  <div class="card__imageContainer">
+    {% include "components/image.twig" with {
+      sizes: [200, 400, 800],
+      image: card.image
+    } %}
+  </div>
+  <div class="card__metaContainer">
+    <div class="card__title font-L">
+      {{ card.title }}
+    </div>
+    <div class="card__subtitle">
+      {{ card.subtitle }}
+    </div>
+  </div>
+</a>

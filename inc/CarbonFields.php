@@ -49,34 +49,18 @@ function add_fields() {
             Field::make( 'text', 'logooverview_title', 'Title' ),
             Field::make( 'media_gallery', 'logooverview_gallery', 'Logos' ),
         ) );
-    
-    // Block Text
-    Container::make('post_meta', 'Block Text')
-        ->where( 'post_type', '=', 'page' )
-        ->add_fields( array(
-            Field::make( 'text', 'blocktext_text', 'Text' ),
-        ) );
 
-    // Projects Slider
-    Container::make('post_meta', 'Projects Slider')
+    // Cards Overview
+    Container::make('post_meta', 'Cards Overview')
         ->where( 'post_type', '=', 'page' )
         ->add_fields( array(
-            Field::make( 'text', 'projectsslider_title', 'Title' ),
-            Field::make( 'complex', 'projectsslider_projects', 'Projects' )
+            Field::make( 'text', 'cardsoverview_title', 'Title' ),
+            Field::make( 'complex', 'cardsoverview_projects', 'Projects' )
                 ->add_fields('project', array(
                     Field::make( 'image', 'image', 'Image' ),
                     Field::make( 'text', 'link', 'Link' ),
-                )),
-        ) );
-
-    // Videos Overview
-    Container::make('post_meta', 'Video Overview')
-        ->where( 'post_type', '=', 'page' )
-        ->add_fields( array(
-            Field::make( 'text', 'videosoverview_title', 'Title' ),
-            Field::make( 'complex', 'videosoverview_videos', 'Videos' )
-                ->add_fields('videos', array(
-                    Field::make( 'oembed', 'video', 'Video' ),
+                    Field::make( 'text', 'title', 'Title' ),
+                    Field::make( 'text', 'subtitle', 'Subtitle' ),
                 )),
         ) );
 

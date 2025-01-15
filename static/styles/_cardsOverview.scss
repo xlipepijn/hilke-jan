@@ -1,0 +1,67 @@
+@use "../globalStyles/_init" as *;
+
+.cardsOverview {
+  overflow: hidden;
+  padding: 10rem 0 6rem 0;
+  @include grid-template;
+  @include media($sm) {
+    padding: 17rem 0 13rem 0;
+  }
+
+  &__cards {
+    grid-column: main;
+
+    .card {
+      margin-inline: 2rem;
+      min-height: 100%;
+    }
+    &:after {
+      content: "flickity";
+      display: none;
+    }
+
+    @include media($sm) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      .card {
+        margin-inline: 0;
+        min-height: unset;
+      }
+      &:after {
+        content: "";
+      }
+    }
+
+    @include media($l) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .flickity-prev-next-button {
+      border-radius: 0.3rem;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 3.8rem;
+      height: 3.8rem;
+      background-color: rgba(247, 247, 247, 0.814);
+      backdrop-filter: blur(40px);
+
+      &:focus {
+        box-shadow: unset;
+      }
+    }
+
+    .flickity-button-icon {
+      fill: $pitch;
+      width: 40%;
+      height: 40%;
+      left: unset;
+      top: unset;
+    }
+
+    .flickity-viewport {
+      overflow: visible;
+    }
+  }
+}
