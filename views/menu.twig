@@ -1,0 +1,15 @@
+<nav class="navigationMain">
+	<a class="navigationMain__logoContainer" href="{{ site.url }}">
+  	{% set themeUrl = function('get_stylesheet_directory_uri') %}
+		<img src="{{ themeUrl ~ '/static/icons/logo.svg' }}" alt="">
+	</a>
+	<div class="navigationMain__buttonContainer">
+		{% include "components/button.twig" with {
+			button : {
+				title : navigationmain_buttontitle,
+				link : navigationmain_buttonlink
+			},
+			classes: ['border-reverse']
+		} %}
+	</div>
+</nav>

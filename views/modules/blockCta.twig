@@ -1,0 +1,16 @@
+<section class="blockCta">
+  <div class="blockCta__content">
+    <div class="blockCta__title font-L">
+      {{ post.meta('blockcta_title' )}}
+    </div>
+    <div class="blockCta__subtitle font-M">
+      {{ post.meta('blockcta_subtitle' )}}
+    </div>
+    {% include "components/button.twig" with {
+      button : {
+        link : post.meta('blockcta_buttonlink') ,
+        title : post.meta('blockcta_buttontitle') 
+      }
+    } %}
+  </div>
+</section>

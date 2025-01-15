@@ -1,0 +1,34 @@
+@use "../globalStyles/_init" as *;
+
+.blockCta {
+  margin: 10rem 0 6rem 0;
+  @include grid-template;
+  @include media($sm) {
+    margin: 17rem 0 13rem 0;
+  }
+
+  &__content {
+    grid-column: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+
+    @include media($sm) {
+      grid-column: 5/-5;
+    }
+
+    @include media($m) {
+      grid-column: 6/-6;
+    }
+
+    @include media($l) {
+      grid-column: 9/-9;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
+  }
+}

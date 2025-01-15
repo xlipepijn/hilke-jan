@@ -1,0 +1,55 @@
+@use "../globalStyles/_init" as *;
+
+.logoOverview {
+  background-color: $lynx;
+  padding: 6rem 0;
+  @include grid-template;
+
+  @include media($l) {
+    padding: 10rem 0;
+  }
+
+  &__titleContainer {
+    grid-column: main;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+
+  &__logos {
+    grid-column: main;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    filter: grayscale(100);
+
+    @include media($sm) {
+      // grid-column: 3/-3;
+    }
+
+    @include media($m) {
+      grid-column: 4/-4;
+    }
+
+    @include media($l) {
+      grid-column: 4/-4;
+    }
+  }
+
+  &__logoContainer {
+    max-width: 15rem;
+    height: 8rem;
+
+    @include media($sm) {
+      max-width: 17rem;
+      height: 9rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

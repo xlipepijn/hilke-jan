@@ -1,0 +1,23 @@
+@use "../globalStyles/_init" as *;
+
+.button {
+  padding: 1rem 1.5rem;
+  background-color: $pitch;
+  box-sizing: border-box;
+  color: white;
+  transition: all 0.2s $easeOutExtra;
+
+  &:not(.border-reverse) {
+    border-left: 0.4rem solid $maincolor;
+    &:hover {
+      border-left: 0.9rem solid $maincolor;
+    }
+  }
+
+  &.border-reverse {
+    border-right: 0.4rem solid $maincolor;
+    &:hover {
+      border-right: 0.9rem solid $maincolor;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<footer class="footer font-S">
+  <div class="footer__content">
+    <div class="footer__email">
+      <strong>
+        Email:
+      </strong>
+      {{ emailaddress }}
+    </div>
+    <div class="footer__linkedin">
+      <strong>
+        LinkedIn:
+      </strong>
+      <a href="{{ linkedinlink }}" target="_blank">
+        {% set themeUrl = function('get_stylesheet_directory_uri') %}
+        <img src="{{ themeUrl }}/static/icons/linkedin.svg" alt="">
+      </a>
+    </div>
+     <div class="footer__copyright font-XS">
+      © {{"now"|date('Y')}} Jop Eikelboom Schrijft | Website door <a href="https://nl.linkedin.com/in/pepijn-eikelboom-60a322133" target="_blank">Pepijn Eikelboom </a>
+    </div>
+  </div>
+</footer>

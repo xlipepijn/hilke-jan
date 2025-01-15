@@ -1,0 +1,42 @@
+@use "../globalStyles/_init" as *;
+
+.videosOverview {
+  margin: 6rem 0;
+  @include grid-template;
+
+  @include media($sm) {
+    margin: 10rem 0;
+  }
+
+  &__titleContainer {
+    grid-column: main;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__videos {
+    grid-column: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include media($sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media($l) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__video {
+    aspect-ratio: 16/9;
+    height: 100%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      // max-height: 100%;
+    }
+  }
+}

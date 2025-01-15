@@ -1,0 +1,19 @@
+<section class="homeIntroduction">
+  <div class="homeIntroduction__textContainer">
+    <div class="homeIntroduction__title font-L">
+      {{ post.meta('homeintroduction_title')}} 
+    </div>
+    <div class="homeIntroduction__text font-M">
+      {{ post.meta('homeintroduction_text')}} 
+    </div>
+    <div class="homeIntroduction__buttonContainer">
+      {% include "components/button.twig" with {
+        button : {
+          title : post.meta('homeintroduction_buttontitle'),
+          link : post.meta('homeintroduction_buttonlink'),
+          target : "_blank"
+        }
+      } %}
+    </div>
+  </div>
+</section>

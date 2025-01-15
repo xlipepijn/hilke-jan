@@ -1,0 +1,40 @@
+@use "../globalStyles/_init" as *;
+
+.navigationMain {
+  height: 6rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: rgba(247, 247, 247, 0.358);
+  background-color: $lynx;
+  border-bottom: 0.2rem solid $ridge;
+  backdrop-filter: blur(40px);
+  z-index: 999;
+  grid-row: 1fr;
+  width: 100%;
+  @include grid-template;
+
+  @include media($sm) {
+    height: 9rem;
+  }
+
+  &__logoContainer {
+    grid-column: left;
+    grid-row: 1/3;
+    
+    img {
+      width: 18rem;
+      @include media($sm) {
+        width: 25rem;
+      }
+    }
+
+  }
+
+  &__buttonContainer {
+    grid-row: 1/3;
+    grid-column: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

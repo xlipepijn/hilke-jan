@@ -1,0 +1,36 @@
+@use "../globalStyles/_init" as *;
+
+.homeIntroduction {
+  margin: 8rem 0;
+  @include grid-template;
+  
+  @include media($l) {
+    margin: 10rem 0 12rem 0;
+  }
+  
+  &__textContainer {
+    
+    grid-column: main;
+    @include media($sm) {
+      grid-column: 2/-3;
+    }
+    
+    @include media($m) {
+      grid-column: 3/-4;
+    }
+    
+    @include media($l) {
+      grid-column: 3/-9;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    color: $maincolor;
+  }
+
+  &__buttonContainer {
+    display: flex;
+    margin-top: 2.5rem;
+  }
+}

@@ -1,0 +1,36 @@
+/************** MAIN COLORS ***********/
+
+//main colors
+$black: rgb(0 0 0);
+$white: rgb(255, 255, 255);
+$grey: rgb(241 241 241);
+
+// grey colors
+$cloud : #F8F8F8;
+$lynx : #f3f2f2;
+$ridge : #E8E8E8;
+$zinc : #D0D0D0; 
+$metal : #353535;
+$ink : #262626;
+$pitch : #040606;
+
+
+// colors
+$maincolor: #bd2020;
+
+
+
+$theme-colors: (
+    "cloud": $cloud,
+    "ridge": $ridge,
+    "zinc": $zinc,
+    "metal": $metal,
+    "ink": $ink,
+    "pitch": $pitch,
+);
+
+@each $name, $color in $theme-colors {
+    [data-color="#{$name}"] {
+        background-color: $color;
+    }
+}

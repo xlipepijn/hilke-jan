@@ -1,0 +1,103 @@
+@use "../globalStyles/_init" as *;
+
+.homeHero {
+  position: relative;
+  padding-top: 10rem;
+  @include grid-template;
+
+  @include media($sm) {
+    padding-top: 12rem;
+  }
+
+  &:before {
+    content: "";
+    background-color: $lynx;
+    height: calc(100% - 12rem);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    // border-bottom: 0.2rem solid $ridge;
+
+    @include media($sm) {
+      height: calc(100% - 8rem);
+    }
+    
+    @include media($m) {
+      border-radius: 5rem;
+    }
+  }
+
+  &:after {
+    @include media($sm) {
+      content: "";
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: $lynx;
+      position: absolute;
+      bottom: 6.5rem - 0.3rem;
+      left: 0;
+      grid-column: main;
+      transform: translateX(0.66rem) rotate(-45deg);
+      // border-bottom: 0.2rem solid $ridge;
+      // border-left: 0.2rem solid $ridge;
+    }
+    @include media($m) {
+      grid-column: 3;
+    }
+  }
+
+  &__titleContainer {
+    grid-column: main;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    align-self: center;
+    max-width: 35rem;
+    position: relative;
+    
+    @include media($sm) {
+      max-width: 40rem;
+      grid-column: left;
+    }
+
+    @include media($m) {
+      grid-column: 3/8;
+    }
+
+    @include media($l) {
+      grid-column: 3/10;
+    }
+  }
+
+  &__arrowContainer {
+    display: none;
+    width: 5rem;
+    position: absolute;
+    right: 5rem;
+    top: 0;
+    transform: translateY(-50%) rotate(12deg);
+
+    @include media($sm) {
+      display: block;
+    }
+  }
+
+  &__imageContainer {
+    grid-column: 3/-2;
+
+    @include media($sm) {
+      grid-column: right;
+    }
+
+    @include media($l) {
+      grid-column: 11 / -4;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

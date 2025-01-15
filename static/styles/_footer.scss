@@ -1,0 +1,45 @@
+@use "../globalStyles/_init" as *;
+
+.footer {
+  padding: 4rem 0 3rem 0;
+  background-color: $pitch;
+  color: white;
+  @include grid-template;
+
+  strong { 
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  &__content {
+    grid-column: main;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    @include media ($sm) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__email {
+
+  }
+
+  &__linkedin {
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  
+  &__copyright {
+    align-self: center;
+    margin-top: 2rem;
+    @include media($sm) {
+      margin-top: 0rem;
+      align-self: flex-end;
+    }
+  }
+}

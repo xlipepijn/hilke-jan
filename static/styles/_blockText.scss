@@ -1,0 +1,27 @@
+@use "../globalStyles/_init" as *;
+
+.blockText {
+  margin: 10rem 0 6rem 0;
+  @include grid-template;
+  
+  @include media($sm) {
+    margin: 12rem 0 7rem 0;
+  }
+
+  &__text {
+    grid-column: main;
+    text-align: center;
+
+    @include media($sm) {
+      grid-column: 5/-5;
+    }
+
+    @include media($m) {
+      grid-column: 6/-6;
+    }
+
+    @include media($l) {
+      grid-column: 9/-9;
+    }
+  }
+}

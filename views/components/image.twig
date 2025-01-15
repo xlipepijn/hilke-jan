@@ -1,0 +1,52 @@
+{% if image %}
+  {% if site.link %}
+      {% set gif = image.post_mime_type == 'image/gif' %}
+      {% set placeholderSize = min(sizes) %}
+
+    {# Image with fixed aspect ratio #}
+    {% if aspectRatio != blank %}
+
+        {% set placeholderSizeY = placeholderSize / aspectRatio %}
+      
+        <img class="{% for class in classes %} {{class}} {% endfor %} {{ not gif ? '' }}"
+          src="{{ not gif ? image.src|resize(placeholderSize, placeholderSizeY) : image.src }}"
+          {% if not gif %}
+          srcset="
+            {% for size in sizes %}
+            {% set sizeY = size / aspectRatio %}
+            {{ image.src|resize(size, sizeY) }} {{size}}w,
+            {% endfor %}
+            "
+          data-sizes="auto"
+          {% endif %}
+        alt="{{ image.alt|e }}">
+        
+    {% else %}
+
+      {# Image without fixed aspect ratio #}
+      <img class="{% for class in classes %} {{class}} {% endfor %} {{ not gif ? '' }}"
+        src="{{ not gif ? image.src|resize(placeholderSize) : image.src }}"
+        {% if not gif %}
+        srcset="
+          {% for size in sizes %}
+          {{ image.src|resize(size) }} {{size}}w,
+          {% endfor %}
+          "
+        data-sizes="auto"
+        {% endif %}
+      alt="{{ image.alt|e }}">
+    {% endif %}
+
+
+  {% else %}
+
+    {# Image for use in the html templates #}
+    <img 
+    class="{% for class in classes %} {{class}} {% endfor %}"  
+    src="{{ image.src }}"
+    alt="{{ image.alt|e }}">
+  {% endif %}
+
+{% else %}
+<div class="image__emptyState"></div>
+{% endif %}

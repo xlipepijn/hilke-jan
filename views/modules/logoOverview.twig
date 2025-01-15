@@ -1,0 +1,15 @@
+<section class="logoOverview">
+  <div class="logoOverview__titleContainer font-L">
+    {{ post.meta('logooverview_title')}}
+  </div>
+
+  <div class="logoOverview__logos">
+    {% for image in post.meta('logooverview_gallery') %}
+      <div class="logoOverview__logoContainer">
+        {% include "components/image.twig" with {
+          sizes: [200, 400]
+        } %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
