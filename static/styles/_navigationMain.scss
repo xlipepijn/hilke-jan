@@ -5,8 +5,9 @@
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: $lynx;
-  border-bottom: 0.2rem solid $ridge;
+  backdrop-filter: blur(31px);
+  background-color: #ffffffa6;
+  border-bottom: 0.2rem solid $lynx;
   backdrop-filter: blur(40px);
   z-index: 999;
   grid-row: 1fr;
@@ -14,7 +15,7 @@
   @include grid-template;
 
   @include media($sm) {
-    height: 9rem;
+    height: 7rem;
   }
 
   &__logoContainer {

@@ -11,13 +11,13 @@
 
   &:before {
     content: "";
-    background-color: $lynx;
     height: calc(100% - 12rem);
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    background-color: $lynx;
 
     @include media($sm) {
       height: calc(100% - 8rem);
@@ -61,22 +61,35 @@
 
   &__imageContainer {
     grid-column: 3/-2;
-    border-radius: 4.5rem;
-    overflow: hidden;
+    position: relative;
+    
+    &:after {
+      content: "";
+      border: 0.3rem solid $maincolor;
+      border-radius: 1rem;
+      width: 7rem;
+      height: 7rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(30%, -30%) rotate(50deg);
+    }
     
     @include media($sm, false) {
       order: 2;
     }
-
+    
     @include media($sm) {
       grid-column: left;
     }
-
+    
     @include media($l) {
-
+      
     }
-
+    
     img {
+      overflow: hidden;
+      border-radius: 4.5rem;
       width: 100%;
     }
   }

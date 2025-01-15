@@ -3,6 +3,8 @@ body {
 	--ctaBarHeight: 0px;
 	--viewportWidth: calc(100vw - var(--scrollbarWidth));
 
+	// background: #fffdf7;
+
 	&.noScroll {
 		height: 100vh !important;
 		overflow: hidden;

@@ -15,7 +15,7 @@
       grid-column: 2/-3;
 
       padding-left: 6rem;
-      border-left: 0.1rem solid $ridge;
+      border-left: 0.1rem solid $maincolor--light;
     }
     
     @include media($m) {

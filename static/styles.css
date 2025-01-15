@@ -228,17 +228,22 @@ strong {
   font-weight: 500;
 }
 
-.font-XXL {
+.font-3XL {
   font-size: clamp(4.8rem, 6.25vw, 5.8rem);
   line-height: 1.1;
   font-family: "DM Serif Display" !important;
 }
 
-.font-XL {
+.font-XXL {
   font-size: clamp(3rem, 3.9vw, 3.8rem);
   line-height: 1.1;
   font-weight: 500;
   font-family: "DM Serif Display" !important;
+}
+
+.font-XL {
+  font-size: 2.6rem;
+  font-weight: 500;
 }
 
 .font-L {
@@ -660,8 +665,9 @@ https://flickity.metafizzy.co
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: #f3f2f2;
-  border-bottom: 0.2rem solid #E8E8E8;
+  backdrop-filter: blur(31px);
+  background-color: rgba(255, 255, 255, 0.6509803922);
+  border-bottom: 0.2rem solid #f3f2f2;
   backdrop-filter: blur(40px);
   z-index: 999;
   grid-row: 1fr;
@@ -692,7 +698,7 @@ https://flickity.metafizzy.co
 }
 @media (min-width: 768px) {
   .navigationMain {
-    height: 9rem;
+    height: 7rem;
   }
 }
 .navigationMain__logoContainer {
@@ -774,7 +780,7 @@ https://flickity.metafizzy.co
 }
 
 .button {
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.7rem;
   box-sizing: border-box;
   transition: all 0.2s cubic-bezier(0, 0, 0.13, 0.95);
   border: 0.1rem solid #36d536;
@@ -855,13 +861,13 @@ https://flickity.metafizzy.co
 }
 .homeHero:before {
   content: "";
-  background-color: #f3f2f2;
   height: calc(100% - 12rem);
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  background-color: #f3f2f2;
 }
 @media (min-width: 768px) {
   .homeHero:before {
@@ -910,8 +916,18 @@ https://flickity.metafizzy.co
 }
 .homeHero__imageContainer {
   grid-column: 3/-2;
-  border-radius: 4.5rem;
-  overflow: hidden;
+  position: relative;
+}
+.homeHero__imageContainer:after {
+  content: "";
+  border: 0.3rem solid #36d536;
+  border-radius: 1rem;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%) rotate(50deg);
 }
 @media (max-width: 767px) {
   .homeHero__imageContainer {
@@ -924,6 +940,8 @@ https://flickity.metafizzy.co
   }
 }
 .homeHero__imageContainer img {
+  overflow: hidden;
+  border-radius: 4.5rem;
   width: 100%;
 }
 
@@ -965,7 +983,7 @@ https://flickity.metafizzy.co
   .homeIntroduction__textContainer {
     grid-column: 2/-3;
     padding-left: 6rem;
-    border-left: 0.1rem solid #E8E8E8;
+    border-left: 0.1rem solid rgba(54, 213, 54, 0.3843137255);
   }
 }
 @media (min-width: 992px) {
@@ -1061,7 +1079,7 @@ https://flickity.metafizzy.co
 
 .cardsOverview {
   overflow: hidden;
-  padding: 10rem 0 6rem 0;
+  padding: 10rem 0 0rem 0;
   display: grid;
   gap: var(--row-gap) var(--column-gap);
   grid-template-columns: [full-start] minmax(1.3vw, 1fr) [main-start] repeat(4, minmax(0, 100px)) [main-end] minmax(1.3vw, 1fr) [full-end];
@@ -1088,7 +1106,8 @@ https://flickity.metafizzy.co
 }
 @media (min-width: 768px) {
   .cardsOverview {
-    padding: 17rem 0 13rem 0;
+    padding: 17rem 0 0rem 0;
+    overflow: visible;
   }
 }
 .cardsOverview__titleContainer {
