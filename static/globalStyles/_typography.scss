@@ -23,7 +23,7 @@
 // 	font-style: bold;
 // }
 
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap');
 
 html {
   font-size: 62.5%; /* 1.6rem = 16px */
@@ -41,7 +41,7 @@ This means on a tablet with 768px the font size is 16 pixels big.
 */
 
 body {
-  font-family: "Merriweather Sans" !important;
+  font-family: "DM Sans" !important;
   font-size: 1.6rem;
   line-height: 1.3;
   color: #040606;
@@ -74,14 +74,14 @@ strong {
 .font-XXL {
   font-size: clamp(4.8rem, 6.25vw, 5.8rem);
   line-height: 1.1;
-  font-family: "Bitter" !important
+  font-family: "DM Serif Display" !important
 }
 
 .font-XL {
   font-size: clamp(3rem, 3.9vw, 3.8rem);
   line-height: 1.1;
   font-weight: 500;
-  font-family: "Bitter" !important;
+  font-family: "DM Serif Display" !important;
 }
 
 .font-L {

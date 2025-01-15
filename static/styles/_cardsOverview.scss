@@ -8,6 +8,12 @@
     padding: 17rem 0 13rem 0;
   }
 
+  &__titleContainer {
+    grid-column: main;
+    text-align: center;
+    margin-bottom: 7rem;
+  }
+
   &__cards {
     grid-column: main;
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -198,7 +198,7 @@ This means on a tablet with 768px the font size is 16 pixels big.
 
 */
 body {
-  font-family: "Merriweather Sans" !important;
+  font-family: "DM Sans" !important;
   font-size: 1.6rem;
   line-height: 1.3;
   color: #040606;
@@ -231,14 +231,14 @@ strong {
 .font-XXL {
   font-size: clamp(4.8rem, 6.25vw, 5.8rem);
   line-height: 1.1;
-  font-family: "Bitter" !important;
+  font-family: "DM Serif Display" !important;
 }
 
 .font-XL {
   font-size: clamp(3rem, 3.9vw, 3.8rem);
   line-height: 1.1;
   font-weight: 500;
-  font-family: "Bitter" !important;
+  font-family: "DM Serif Display" !important;
 }
 
 .font-L {
@@ -660,7 +660,6 @@ https://flickity.metafizzy.co
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: rgba(247, 247, 247, 0.358);
   background-color: #f3f2f2;
   border-bottom: 0.2rem solid #E8E8E8;
   backdrop-filter: blur(40px);
@@ -776,22 +775,16 @@ https://flickity.metafizzy.co
 
 .button {
   padding: 1rem 1.5rem;
-  background-color: #040606;
   box-sizing: border-box;
-  color: white;
   transition: all 0.2s cubic-bezier(0, 0, 0.13, 0.95);
+  border: 0.1rem solid #36d536;
+  border-radius: 9rem;
+  background-color: white;
+  text-transform: uppercase;
 }
-.button:not(.border-reverse) {
-  border-left: 0.4rem solid #bd2020;
-}
-.button:not(.border-reverse):hover {
-  border-left: 0.9rem solid #bd2020;
-}
-.button.border-reverse {
-  border-right: 0.4rem solid #bd2020;
-}
-.button.border-reverse:hover {
-  border-right: 0.9rem solid #bd2020;
+.button:hover {
+  background-color: #36d536;
+  color: white;
 }
 
 .card {
@@ -875,27 +868,13 @@ https://flickity.metafizzy.co
     height: calc(100% - 8rem);
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1280px) {
   .homeHero:before {
     border-radius: 5rem;
-  }
-}
-@media (min-width: 768px) {
-  .homeHero:after {
-    content: "";
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #f3f2f2;
-    position: absolute;
-    bottom: 6.2rem;
-    left: 0;
-    grid-column: main;
-    transform: translateX(0.66rem) rotate(-45deg);
-  }
-}
-@media (min-width: 992px) {
-  .homeHero:after {
-    grid-column: 3;
+    width: 140rem;
+    margin-inline: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .homeHero__titleContainer {
@@ -908,46 +887,40 @@ https://flickity.metafizzy.co
   max-width: 35rem;
   position: relative;
 }
+@media (max-width: 767px) {
+  .homeHero__titleContainer {
+    order: 1;
+  }
+}
 @media (min-width: 768px) {
   .homeHero__titleContainer {
     max-width: 40rem;
-    grid-column: left;
+    grid-column: -7/-2;
   }
 }
 @media (min-width: 992px) {
   .homeHero__titleContainer {
-    grid-column: 3/8;
+    grid-column: -7/-2;
   }
 }
 @media (min-width: 1280px) {
   .homeHero__titleContainer {
-    grid-column: 3/10;
-  }
-}
-.homeHero__arrowContainer {
-  display: none;
-  width: 5rem;
-  position: absolute;
-  right: 5rem;
-  top: 0;
-  transform: translateY(-50%) rotate(12deg);
-}
-@media (min-width: 768px) {
-  .homeHero__arrowContainer {
-    display: block;
+    grid-column: -11/-3;
   }
 }
 .homeHero__imageContainer {
   grid-column: 3/-2;
+  border-radius: 4.5rem;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .homeHero__imageContainer {
+    order: 2;
+  }
 }
 @media (min-width: 768px) {
   .homeHero__imageContainer {
-    grid-column: right;
-  }
-}
-@media (min-width: 1280px) {
-  .homeHero__imageContainer {
-    grid-column: 11/-4;
+    grid-column: left;
   }
 }
 .homeHero__imageContainer img {
@@ -991,6 +964,8 @@ https://flickity.metafizzy.co
 @media (min-width: 768px) {
   .homeIntroduction__textContainer {
     grid-column: 2/-3;
+    padding-left: 6rem;
+    border-left: 0.1rem solid #E8E8E8;
   }
 }
 @media (min-width: 992px) {
@@ -1005,7 +980,7 @@ https://flickity.metafizzy.co
 }
 .homeIntroduction__title {
   margin-bottom: 1rem;
-  color: #bd2020;
+  text-transform: uppercase;
 }
 .homeIntroduction__buttonContainer {
   display: flex;
@@ -1115,6 +1090,11 @@ https://flickity.metafizzy.co
   .cardsOverview {
     padding: 17rem 0 13rem 0;
   }
+}
+.cardsOverview__titleContainer {
+  grid-column: main;
+  text-align: center;
+  margin-bottom: 7rem;
 }
 .cardsOverview__cards {
   grid-column: main;

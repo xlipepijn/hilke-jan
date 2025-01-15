@@ -18,33 +18,17 @@
     top: 0;
     left: 0;
     z-index: -1;
-    // border-bottom: 0.2rem solid $ridge;
 
     @include media($sm) {
       height: calc(100% - 8rem);
     }
     
-    @include media($m) {
+    @include media($l) {
       border-radius: 5rem;
-    }
-  }
-
-  &:after {
-    @include media($sm) {
-      content: "";
-      width: 3.5rem;
-      height: 3.5rem;
-      background-color: $lynx;
-      position: absolute;
-      bottom: 6.5rem - 0.3rem;
-      left: 0;
-      grid-column: main;
-      transform: translateX(0.66rem) rotate(-45deg);
-      // border-bottom: 0.2rem solid $ridge;
-      // border-left: 0.2rem solid $ridge;
-    }
-    @include media($m) {
-      grid-column: 3;
+      width: 140rem;
+      margin-inline: auto;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -57,43 +41,39 @@
     align-self: center;
     max-width: 35rem;
     position: relative;
+    @include media($sm, false) {
+      order: 1;
+    }
     
     @include media($sm) {
       max-width: 40rem;
-      grid-column: left;
+      grid-column: -7/-2;
     }
 
     @include media($m) {
-      grid-column: 3/8;
+      grid-column: -7/-2;
     }
 
     @include media($l) {
-      grid-column: 3/10;
-    }
-  }
-
-  &__arrowContainer {
-    display: none;
-    width: 5rem;
-    position: absolute;
-    right: 5rem;
-    top: 0;
-    transform: translateY(-50%) rotate(12deg);
-
-    @include media($sm) {
-      display: block;
+      grid-column: -11/-3;
     }
   }
 
   &__imageContainer {
     grid-column: 3/-2;
+    border-radius: 4.5rem;
+    overflow: hidden;
+    
+    @include media($sm, false) {
+      order: 2;
+    }
 
     @include media($sm) {
-      grid-column: right;
+      grid-column: left;
     }
 
     @include media($l) {
-      grid-column: 11 / -4;
+
     }
 
     img {

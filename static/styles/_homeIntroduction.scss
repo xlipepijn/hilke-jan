@@ -13,6 +13,9 @@
     grid-column: main;
     @include media($sm) {
       grid-column: 2/-3;
+
+      padding-left: 6rem;
+      border-left: 0.1rem solid $ridge;
     }
     
     @include media($m) {
@@ -26,7 +29,7 @@
 
   &__title {
     margin-bottom: 1rem;
-    color: $maincolor;
+    text-transform: uppercase;
   }
 
   &__buttonContainer {
