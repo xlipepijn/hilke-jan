@@ -1,11 +1,11 @@
 @use "../globalStyles/_init" as *;
 
 .cardsOverview {
-  overflow: hidden;
+  overflow: visible;
   padding: 10rem 0 0rem 0;
   @include grid-template;
   @include media($sm) {
-    padding: 17rem 0 0rem 0;
+    // padding: 17rem 0 0rem 0;
     overflow: visible;
   }
 
@@ -13,6 +13,18 @@
     grid-column: main;
     text-align: center;
     margin-bottom: 7rem;
+
+    @include media($sm) {
+      grid-column: 5/-5;
+    }
+
+    @include media($m) {
+      grid-column: 6/-6;
+    }
+
+    @include media($l) {
+      grid-column: 9/-9;
+    }
   }
 
   &__cards {

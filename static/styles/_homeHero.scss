@@ -79,7 +79,7 @@
     }
     
     @include media($l) {
-      
+      grid-column: 3/11;
     }
     
     img {

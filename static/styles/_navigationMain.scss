@@ -24,9 +24,6 @@
     
     img {
       width: 18rem;
-      @include media($sm) {
-        width: 25rem;
-      }
     }
 
   }
