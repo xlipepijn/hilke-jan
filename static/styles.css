@@ -229,8 +229,9 @@ strong {
 }
 
 .font-3XL {
-  font-size: clamp(4.8rem, 6.25vw, 5.8rem);
+  font-size: clamp(5.4rem, 8.8vw, 6.8rem);
   line-height: 1.1;
+  font-weight: 500;
   font-family: "DM Serif Display" !important;
 }
 
@@ -238,17 +239,18 @@ strong {
   font-size: clamp(3rem, 3.9vw, 3.8rem);
   line-height: 1.1;
   font-weight: 500;
-  font-family: "DM Serif Display" !important;
 }
 
 .font-XL {
   font-size: 2.6rem;
   font-weight: 500;
+  font-family: "DM Serif Display" !important;
 }
 
 .font-L {
   font-size: 2.2rem;
   font-weight: 500;
+  font-family: "DM Serif Display" !important;
 }
 
 .font-M {
@@ -722,7 +724,7 @@ https://flickity.metafizzy.co
 
 .footer {
   padding: 4rem 0 3rem 0;
-  background-color: #040606;
+  background-color: #192b32;
   color: white;
   display: grid;
   gap: var(--row-gap) var(--column-gap);
@@ -783,13 +785,13 @@ https://flickity.metafizzy.co
   padding: 1rem 1.7rem;
   box-sizing: border-box;
   transition: all 0.2s cubic-bezier(0, 0, 0.13, 0.95);
-  border: 0.1rem solid #36d536;
+  border: 0.1rem solid #A6C6D2;
   border-radius: 9rem;
   background-color: white;
   text-transform: uppercase;
 }
 .button:hover {
-  background-color: #36d536;
+  background-color: #A6C6D2;
   color: white;
 }
 
@@ -799,6 +801,7 @@ https://flickity.metafizzy.co
   background-color: #f3f2f2;
   box-shadow: rgba(0, 0, 0, 0) 0px 4px 12px;
   transition: box-shadow 0.2s ease-out;
+  border-bottom: 0.4rem solid #A6C6D2;
 }
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -867,20 +870,11 @@ https://flickity.metafizzy.co
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: #f3f2f2;
+  background-color: #EDF3F6;
 }
 @media (min-width: 768px) {
   .homeHero:before {
     height: calc(100% - 8rem);
-  }
-}
-@media (min-width: 1280px) {
-  .homeHero:before {
-    border-radius: 5rem;
-    width: 140rem;
-    margin-inline: auto;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 .homeHero__titleContainer {
@@ -890,8 +884,9 @@ https://flickity.metafizzy.co
   gap: 1rem;
   margin-bottom: 4rem;
   align-self: center;
-  max-width: 35rem;
+  max-width: 40rem;
   position: relative;
+  color: #192b32;
 }
 @media (max-width: 767px) {
   .homeHero__titleContainer {
@@ -900,7 +895,7 @@ https://flickity.metafizzy.co
 }
 @media (min-width: 768px) {
   .homeHero__titleContainer {
-    max-width: 40rem;
+    max-width: 45rem;
     grid-column: -7/-2;
   }
 }
@@ -917,17 +912,19 @@ https://flickity.metafizzy.co
 .homeHero__imageContainer {
   grid-column: 3/-2;
   position: relative;
+  aspect-ratio: 1/1;
 }
-.homeHero__imageContainer:after {
+.homeHero__imageContainer:before {
   content: "";
-  border: 0.3rem solid #36d536;
-  border-radius: 1rem;
-  width: 7rem;
-  height: 7rem;
+  background-color: #A6C6D2;
+  height: 100%;
+  width: 100%;
+  border-radius: 4.5rem;
+  transform: rotate(-3deg);
   position: absolute;
+  left: 0;
   top: 0;
-  right: 0;
-  transform: translate(30%, -30%) rotate(50deg);
+  z-index: -1;
 }
 @media (max-width: 767px) {
   .homeHero__imageContainer {
@@ -943,6 +940,9 @@ https://flickity.metafizzy.co
   overflow: hidden;
   border-radius: 4.5rem;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 9;
 }
 
 .homeIntroduction {
@@ -983,7 +983,7 @@ https://flickity.metafizzy.co
   .homeIntroduction__textContainer {
     grid-column: 2/-3;
     padding-left: 6rem;
-    border-left: 0.1rem solid rgba(54, 213, 54, 0.3843137255);
+    border-left: 0.1rem solid rgba(166, 198, 210, 0.3843137255);
   }
 }
 @media (min-width: 992px) {
@@ -998,7 +998,6 @@ https://flickity.metafizzy.co
 }
 .homeIntroduction__title {
   margin-bottom: 1rem;
-  text-transform: uppercase;
 }
 .homeIntroduction__buttonContainer {
   display: flex;
@@ -1006,7 +1005,7 @@ https://flickity.metafizzy.co
 }
 
 .logoOverview {
-  background-color: #f3f2f2;
+  background-color: #EDF3F6;
   padding: 6rem 0;
   display: grid;
   gap: var(--row-gap) var(--column-gap);
@@ -1049,7 +1048,6 @@ https://flickity.metafizzy.co
   gap: 4rem;
   flex-wrap: wrap;
   align-items: center;
-  filter: grayscale(100);
 }
 @media (min-width: 992px) {
   .logoOverview__logos {

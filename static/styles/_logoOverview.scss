@@ -1,7 +1,7 @@
 @use "../globalStyles/_init" as *;
 
 .logoOverview {
-  background-color: $lynx;
+  background-color: $maincolor--light2;
   padding: 6rem 0;
   @include grid-template;
 
@@ -22,11 +22,6 @@
     gap: 4rem;
     flex-wrap: wrap;
     align-items: center;
-    filter: grayscale(100);
-
-    @include media($sm) {
-      // grid-column: 3/-3;
-    }
 
     @include media($m) {
       grid-column: 4/-4;

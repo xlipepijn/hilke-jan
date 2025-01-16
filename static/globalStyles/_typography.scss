@@ -72,8 +72,9 @@ strong {
 }
 
 .font-3XL {
-  font-size: clamp(4.8rem, 6.25vw, 5.8rem);
+  font-size: clamp(5.4rem, 8.8vw, 6.8rem);
   line-height: 1.1;
+  font-weight: 500;
   font-family: "DM Serif Display" !important
 }
 
@@ -81,17 +82,19 @@ strong {
   font-size: clamp(3rem, 3.9vw, 3.8rem);
   line-height: 1.1;
   font-weight: 500;
-  font-family: "DM Serif Display" !important;
+  // font-family: "DM Serif Display" !important;
 }
 
 .font-XL {
   font-size: 2.6rem;
   font-weight: 500;
+  font-family: "DM Serif Display" !important;
 }
 
 .font-L {
   font-size: 2.2rem;
   font-weight: 500;
+  font-family: "DM Serif Display" !important;
 }
 
 .font-M {
