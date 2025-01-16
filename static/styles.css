@@ -993,7 +993,7 @@ https://flickity.metafizzy.co
 }
 @media (min-width: 1280px) {
   .homeIntroduction__textContainer {
-    grid-column: 3/-9;
+    grid-column: 4/-8;
   }
 }
 .homeIntroduction__title {

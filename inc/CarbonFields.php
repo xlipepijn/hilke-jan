@@ -36,7 +36,7 @@ function add_fields() {
         ->where( 'post_type', '=', 'page' )
         ->add_fields( array(
             Field::make( 'text', 'homeintroduction_title', 'Title' ),
-            Field::make( 'textarea', 'homeintroduction_text', 'Text' ),
+            Field::make( 'rich_text', 'homeintroduction_text', 'Text' ),
             Field::make( 'text', 'homeintroduction_buttontitle', 'Button Title' ),
             Field::make( 'text', 'homeintroduction_buttonlink', 'Button Link' )
                 ->set_attribute( 'placeholder', 'mailto:' )
